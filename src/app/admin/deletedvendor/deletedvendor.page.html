@@ -1,0 +1,182 @@
+<ion-header [translucent]="true" class="header">
+  <ion-img src="assets/logo.png" class="img"></ion-img>
+  </ion-header>
+
+
+  <ion-content>
+
+    <ion-grid style="margin-top: 30px;">
+      <ion-row class="row1">
+        <ion-col size="4" class="content1">
+          <ion-label class="menu" (click)="moveToHome()">Home</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu" (click)="inviteNav('toplevel')">Top Level Reports</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu" (click)="inviteNav('purchase')">Purchase Order Details</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu" (click)="inviteNav('vendorinform')">Vendor Information</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu" (click)="inviteNav('invited')">Invited Vendors</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu" (click)="moveToAd()">Administrator Accounts</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">Sent Emails Log</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">Action Logs</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">Reset Test Account</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">IT Support Logs</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">GDPR</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">Logout</ion-label>
+        </ion-col>
+        <ion-col size="8" class="content2">
+      
+  <p style="text-align: center;">Please fill in and submit this form so invite a new vendor.</p>
+  <p style="text-align: center;color: red;">Please ensure that fields labelled in RED are filled in.</p>
+  <ion-row class="back" style="margin-top: 2px;width: 700px;margin-left: 5%;margin-right: 20%;">Invite Vendor</ion-row>
+<!-- <form onsubmit="sendvendorEmail();reset();return;" method="post" class="class_form"> -->
+  <div class="login" style="margin-top: 2px;">
+    <ion-row class="wholeclass" style="margin-top: 2px;width: 700px;margin-left: 5%;margin-right: 20%;">
+      <ion-col class="back" size="4">
+        <ion-label style="text-align: right;color: red;">Company name:</ion-label>
+      </ion-col>
+      <ion-col size="8">
+       <ion-input class="input" [(ngModel)]="api.tempVendor.companyname"></ion-input>
+      <ion-label *ngIf="companynameNot" style="color: red;">*Please fill this field</ion-label>
+    </ion-col>
+    </ion-row>
+    
+    <ion-row class="wholeclass" style="margin-top: 2px;width: 700px;margin-left: 5%;margin-right: 20%;">
+      <ion-col class="back" size="4">
+        <ion-label style="text-align: right;color: red;">
+   Company Email:
+        </ion-label>
+      </ion-col>
+      <ion-col size="8">
+       <ion-input class="input" [(ngModel)]="api.tempVendor.companyEmail"></ion-input>
+      <ion-label *ngIf="companyEmailNot" style="color: red;">*Please fill this field</ion-label>
+    </ion-col>
+    </ion-row>
+    <ion-row class="wholeclass" style="margin-top: 2px;width: 700px;margin-left: 5%;margin-right: 20%;">
+      <ion-col class="back" size="4">
+        <ion-label style="text-align: right;color: red;">
+   Requested Email:
+        </ion-label>
+      </ion-col>
+      <ion-col size="8">
+       <ion-input class="input" [(ngModel)]="api.tempVendor.requestEmail"></ion-input>
+       <!-- <div *ngIf="!passhide"> -->
+        <!-- <ion-input class="input" [value]="randomId" id="requestpass"></ion-input> -->
+       <!-- </div> -->
+      <ion-label *ngIf="requestEmailNot" style="color: red;">*Please fill this field</ion-label>
+    </ion-col>
+    </ion-row>
+    <ion-row class="wholeclass" style="margin-top: 2px;width: 700px;margin-left: 5%;margin-right: 20%;">
+      <ion-col class="back" size="4">
+        <ion-label>Upload invoice if Exists</ion-label>
+        </ion-col>
+      <ion-col class="" size="8">
+    <!-- <ion-button class="btnLogin" > Browse...</ion-button> -->
+    <ion-input class="btnLogin" type="file" placeholder="Browse.."></ion-input>
+
+    <ion-label style="vertical-align: middle;">No file selected.</ion-label>
+  </ion-col>
+ </ion-row>
+   
+    <ion-row class="back" style="margin-top: 2px;justify-content: end;width: 700px;margin-left: 5%;margin-right: 20%;">
+      <ion-col size="8"></ion-col>
+      <ion-col size="4">
+        <ion-row>
+         <ion-col>
+           <ion-button class="btnLogin" (click)="back()">
+             <ion-icon name="chevron-back"></ion-icon>
+             <ion-icon name="chevron-back" style="margin-left: -10px;"></ion-icon>
+             Back
+           </ion-button>
+         </ion-col>
+         <ion-col>
+          <ion-button class="btnLogin" (click)="fileuploads()">delete</ion-button>
+         </ion-col>
+         <ion-col>
+          <ion-button class="btnLogin" (click)="fileuploads()">delete invoice</ion-button>
+         </ion-col>
+        <ion-button class="btnLogin" type="submit" (click)="fileuploads()">Submit</ion-button>
+        
+        </ion-row>
+      </ion-col>
+    </ion-row>
+   </div>
+  <!-- </form> -->
+</ion-col>
+  </ion-row>
+</ion-grid>
+  
+<!-- <script>
+  function sendvendorEmail(){
+    // alert('Your Message submitted successfully');
+    console.log('requestEmail')
+    Email.send({
+      Host : "smtp.elasticemail.com",
+      Username : "lilypackiyam@gmail.com",
+      Password : "0527721E803854F2C924B66A3BAEAE2A03B2",
+      To : document.getElementById('requestEmail').value,
+      // To : `${email}`,
+      From : 'lilypackiyam@gmail.com',
+      Subject : "This is the subject",
+      Body : `${'we have created a new vendor account for you.Here is the link to activate the account.'}
+               userName : ${document.getElementById('requestEmail').value},
+               password : ${document.getElementById('requestpass').value}`
+    }).then(
+    message => 
+    // console.log(message)
+    // alert(message)
+    alert('message sent successfully')
+
+    );
+  }
+ </script> -->
+
+  </ion-content>
+  <ion-footer style="position: relative;">
+    <div class="footer"></div>
+    <ion-row>
+      <ion-col>
+  <ion-label style="margin-left: 5px;font-weight: bold;">© 2017 SES S.A. All rights reserved.</ion-label>
+  </ion-col>
+  
+   
+    
+  <ion-col></ion-col>
+  <ion-label style="margin-top: 10px;">Follow Us</ion-label>
+  <ion-col>
+    <ion-row>
+    <ion-img src="assets/twitter.png" class="icon"></ion-img>
+    
+    <ion-img src="assets/facebook.png" class="icon"></ion-img>
+    
+  
+    <ion-img src="assets/youtube.png" class="icon"></ion-img>
+  
+    <ion-img src="assets/linkedin.png" class="icon"></ion-img>
+  
+    <ion-img src="assets/instagram.png" class="icon"></ion-img>  
+    <ion-label style="font-weight: bold;padding-left: 10px;">| Privacy</ion-label>
+    <ion-label style="font-weight: bold;padding-left: 10px;">| Terms and Conditions</ion-label>
+  </ion-row>
+  </ion-col>
+  </ion-row>
+  </ion-footer>

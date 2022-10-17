@@ -1,0 +1,220 @@
+<ion-header [translucent]="true" class="header">
+  <ion-img src="assets/logo.png" class="img"></ion-img>
+  </ion-header>
+
+
+  <ion-content>
+
+    <ion-grid style="margin-top: 30px;">
+      <ion-row class="row1">
+        <ion-col size="2" class="content1">
+        
+          <ion-label class="menu" (click)="moveToHome()">Home</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu" (click)="moveToTopLevel()">Top Level Reports</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu" (click)="moveToPurchase()">Purchase Order Details</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu" (click)="moveToVendorInfo()">Vendor Information</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu" (click)="moveToInVendor()">Invited Vendors</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu" (click)="moveToAd()">Administrator Accounts</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">Sent Emails Log</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">Action Logs</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">Reset Test Account</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">IT Support Logs</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">GDPR</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu" (click)="logout()">Logout</ion-label>
+        </ion-col>
+        <ion-col size="10" class="content2">
+      
+          <p style="text-align: center;">Here is the report. Click the report table headings to sort.</p>
+          <ion-row class="back" style="margin-left: 10%;margin-right: 10%;text-align-last: end;">
+            <ion-col size="6">
+          
+            </ion-col>
+           
+            <ion-col size="6">
+              <ion-button class="btnLogin" (click)="moveToTopLevel()">
+                <ion-icon name="chevron-back"></ion-icon>
+                <ion-icon name="chevron-back" style="margin-left: -10px;"></ion-icon>
+                Back</ion-button>
+              <ion-button class="btnLogin" >Download as CSV</ion-button>
+            </ion-col>
+          </ion-row>
+          <br>
+  <div class="login" style="margin-top: 2px;">
+  <ion-row class="back" style="padding: 5px;font-weight: bold;">Report: Details Of All Invited Vendors Who Were Deleted </ion-row>
+    <ion-row class="wholeclass" style="margin-top: 2px;">
+      <ion-col class="back" size="2">
+        <ion-label class="highlight1">
+  Vendor Temp Id
+        </ion-label>
+      </ion-col>
+      <ion-col class="back" size="3">
+        <ion-label class="highlight1">
+        Company
+               </ion-label>
+      </ion-col>
+      <ion-col class="back" size="1">
+        <ion-label class="highlight1">
+   Invited
+        </ion-label>
+      </ion-col>
+      <ion-col class="back" size="1">
+        <ion-label class="highlight1">
+  Invited by
+        </ion-label>
+      </ion-col>
+      <ion-col class="back" size="3">
+        <ion-label class="highlight1">
+Requester e-mail
+        </ion-label>
+      </ion-col>
+      <ion-col class="back" size="1">
+        <ion-label class="highlight1">
+Deleted
+        </ion-label>
+      </ion-col>
+      <ion-col class="back" size="1">
+        <ion-label class="highlight1">
+Deleted by
+        </ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top: 2px;">
+      <ion-col class="background" size="2">
+        <ion-label style="text-transform: uppercase;">
+ temp002861
+        </ion-label>
+      </ion-col>
+      <ion-col class="background back" size="3" (click)="moveToCP()">
+        <ion-label style="text-transform: uppercase;">
+sanderspanenburg,
+               </ion-label>
+
+<p style="margin-top: -2px;">sanderspanenburg@gmail.com</p>              
+</ion-col>
+      <ion-col class="background back" size="1">
+        <ion-label>
+2019-02-12 10:03:25
+        </ion-label>
+      </ion-col>
+      <ion-col class="background back" size="1">
+        <ion-label style="text-transform:capitalize;">
+Bhavanee
+        </ion-label>
+      </ion-col>
+      
+      <ion-col class="background back" size="3">
+        <ion-label>
+matthijis.holstein@ses.com
+        </ion-label>
+      </ion-col>
+      <ion-col class="back background" size="1" >
+<ion-label>2020-06-24 11:22:46</ion-label>
+      </ion-col>
+      <ion-col class="back background" size="1" >
+        <ion-label style="text-transform: capitalize;">
+          Bhavanee
+        </ion-label>
+              </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top: 2px;">
+      <ion-col class="background1" size="2">
+        <ion-label style="text-transform: uppercase;">
+ temp002861
+        </ion-label>
+      </ion-col>
+      <ion-col class="background1 back" size="3">
+        <ion-label style="text-transform: uppercase;">
+sanderspanenburg,
+               </ion-label>
+
+<p style="margin-top: -2px;">sanderspanenburg@gmail.com</p></ion-col>
+      <ion-col class="background1 back" size="1">
+        <ion-label>
+2019-02-12 10:03:25
+        </ion-label>
+      </ion-col>
+      <ion-col class="background1 back" size="1">
+        <ion-label style="text-transform:capitalize;">
+        Bhavanee
+        </ion-label>
+      </ion-col>
+      
+      <ion-col class="background1 back" size="3">
+        <ion-label>
+       matthijis.holstein@ses.com
+        </ion-label>
+      </ion-col>
+      <ion-col class="back background1" size="1" >
+      <ion-label>2020-06-24 11:22:46</ion-label>
+      </ion-col>
+      <ion-col class="back background1" size="1" >
+        <ion-label style="text-transform: capitalize;">
+          Bhavanee
+        </ion-label>
+    </ion-col>
+  </ion-row>
+
+  
+    
+  </div>
+  
+  </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+  </ion-content>
+  
+  <ion-footer style="position: relative;">
+    <div class="footer"></div>
+    <ion-row>
+      <ion-col>
+  <ion-label style="margin-left: 5px;font-weight: bold;">© 2017 SES S.A. All rights reserved.</ion-label>
+  </ion-col>
+  
+   
+    
+  <ion-col></ion-col>
+  <ion-label style="margin-top: 10px;">Follow Us</ion-label>
+  <ion-col>
+    <ion-row>
+    <ion-img src="assets/twitter.png" class="icon"></ion-img>
+    
+    <ion-img src="assets/facebook.png" class="icon"></ion-img>
+    
+  
+    <ion-img src="assets/youtube.png" class="icon"></ion-img>
+  
+    <ion-img src="assets/linkedin.png" class="icon"></ion-img>
+  
+    <ion-img src="assets/instagram.png" class="icon"></ion-img> 
+    <ion-label style="font-weight: bold;padding-left: 10px;">| Privacy</ion-label>
+    <ion-label style="font-weight: bold;padding-left: 10px;">| Terms and Conditions</ion-label>
+  </ion-row>
+  </ion-col>
+  </ion-row>
+  </ion-footer>
+
