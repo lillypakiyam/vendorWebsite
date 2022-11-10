@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Ionic App</title>
+
+  <base href="/" />
+
+  <meta name="color-scheme" content="light dark" />
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
+
+  <!-- add to homescreen for ios -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+</head>
+
+<body>
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+  const form = document.querySelector('.class_form');
+  form.addEventListener("submit", e=>{
+    e.preventDefault()
+    let name = document.querySelector('#login')
+    let email = document.querySelector('#email')
+    document.querySelector('.class_form').reset()
+    // console.log(name,email)
+    // sendEmail(name, email)
+  })
+  function sendEmail(){
+    // alert('Your Message submitted successfully');
+    Email.send({
+      Host : "smtp.elasticemail.com",
+      Username : "lilypackiyam@gmail.com",
+      Password : "0527721E803854F2C924B66A3BAEAE2A03B2",
+      To : document.getElementById('email').value,
+      From : 'lilypackiyam@gmail.com',
+      Subject : "This is the subject",
+      Body : `${'we have created a new admin account for you.Here is the link to activate the account.'}
+              'userName': ${document.getElementById('email').value},
+              'password': ${document.getElementById('login').value+'@123'}`
+    }).then(
+    message => 
+    // console.log(message)
+    // alert(message)
+    alert('message sent successfully')
+    // alert('Your Message submitted successfully');
+    );
+  }
+ </script>
+
+<script>
+  const datetimeValue = document.querySelector('#datetimeValue');
+const datetime = document.querySelector('#datetime');
+
+function setDateTimeValue(val) {
+  const text = new Intl.DateTimeFormat('en', { dateStyle: 'long' }).format(
+    Date.parse(val)
+  );
+  datetimeValue.innerText = text;
+}
+
+document.addEventListener('DOMContentLoaded', () =>
+  setDateTimeValue(datetime.value)
+);
+datetime.addEventListener('ionChange', (e) => setDateTimeValue(e.detail.value));
+
+</script>
+
+
+<!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+  var password = document.getElementById('requestEmail').value
+  console.log(password)
+  const forms = document.querySelector('.class_form');
+  form.addEventListener("submit", e=>{
+    console.log(e)
+  e.preventDefault()
+  let email = document.querySelector('#requestEmail')
+  let pass = document.querySelector('#requestpass')
+  document.querySelector('.class_form').reset()
+})
+  function sendvendorEmail(){
+    // console.log(venid)
+  var password = document.getElementById('requestEmail').value
+  console.log(password)
+    Email.send({
+      Host : "smtp.elasticemail.com",
+      Username : "lilypackiyam@gmail.com",
+      Password : "0527721E803854F2C924B66A3BAEAE2A03B2",
+      To : document.getElementById('requestEmail').value,
+      // To : `${email}`,
+      From : 'lilypackiyam@gmail.com',
+      Subject : "This is the subject",
+      Body : `${'we have created a new vendor account for you.Here is the link to activate the account.'}
+               userName : ${document.getElementById('requestEmail').value},
+               password : ${document.getElementById('requestpass').value}`
+    }).then(
+    message => 
+    alert('message sent successfully')
+
+    );
+  }
+ </script> -->
+  <app-root></app-root>
+</body>
+
+</html>
