@@ -1,0 +1,311 @@
+<ion-header [translucent]="true" class="header">
+  <ion-img src="assets/logo.png" class="img"></ion-img>
+  </ion-header>
+
+
+  <ion-content>
+
+    <ion-grid style="margin-top: 30px;">
+      <ion-row class="row1">
+        <ion-col size="2" class="content1">
+          <ion-label class="menu" (click)="summary()">Summary Profile</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu" (click)="util.Logout()">Logout</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">FAQ</ion-label>
+          <br>
+          <br>
+      <ion-label class="menu">Contact Us</ion-label>
+
+        </ion-col>
+        <ion-col size="10" class="content2">
+        
+          <ion-row class="back" style="
+padding: 5px;margin-top: 2px;text-align: center;justify-content: start;color: black;font-weight: bold;">Login information:</ion-row>       
+
+
+<div class="login" style="margin-top: 2px;">
+  <ion-row class="wholeclass">
+    <ion-col class="back" size="4">
+      <ion-label style="text-align: right;">
+       Vendor ID:
+      </ion-label>
+    </ion-col>
+    <ion-col size="8">
+     <ion-label>{{loggedInVendor.permenantId}}</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row class="back" style="margin-top: 2px;justify-content: end;">
+    <ion-col size="10"></ion-col>
+    <ion-col size="2">
+      <ion-button class="btnLogin">
+        Change password
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="back" style="
+  padding: 5px;margin-top: 2px;text-align: center;justify-content: start;color: black;font-weight: bold;">Address Summary:</ion-row>   
+   <ion-row class="wholeclass" style="margin-top: 2px;">
+    <ion-col class="back" style="text-align-last: start;" size="3">
+      <ion-label>
+         Type
+      </ion-label>
+    </ion-col>
+    <ion-col class="back2" size="3">
+      <ion-label>
+    Company Name
+             </ion-label>
+    </ion-col>
+    <ion-col class="back2" size="3">
+      <ion-label>
+Address
+      </ion-label>
+    </ion-col>
+    <ion-col class="back2" size="1">
+      <ion-label>
+City
+      </ion-label>
+    </ion-col>
+    <ion-col class="back2" size="2">
+      <ion-label>
+Phone
+      </ion-label>
+    </ion-col>
+  </ion-row>
+
+  <ion-row style="margin-top: 2px;">
+    <ion-col class="background" size="3">
+      <ion-label>
+Ordering address
+      </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="3">
+      <ion-label style="text-decoration: underline;text-transform: uppercase;" color="secondary">
+<!-- on computer services, llc -->
+     {{loggedInVendor.companyname}}
+             </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="3">
+      <ion-label style="text-transform:uppercase;">
+<!-- 9351  philadelphia road, suite -->
+     {{loggedInVendor.Address}}
+      </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="1">
+      <ion-label style="text-transform:capitalize;">
+<!-- baltimore -->
+     {{loggedInVendor.country}}
+
+      </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="2">
+      <ion-label>
+<!-- 19725246052 -->
+     {{loggedInVendor.ph_no}}
+      </ion-label>
+    </ion-col>
+  </ion-row>
+
+  <!-- <ion-row style="margin-top: 2px;">
+    <ion-col class="background" size="3">
+      <ion-label>
+Company registration address
+      </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="3">
+      <ion-label style="text-decoration: underline;text-transform: uppercase;" color="secondary">
+on computer services, llc
+             </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="3">
+      <ion-label style="text-transform:uppercase;">
+9351  philadelphia road, suite
+      </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="1">
+      <ion-label style="text-transform:capitalize;">
+baltimore
+      </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="2">
+      <ion-label>
+19725246052
+      </ion-label>
+    </ion-col>
+  </ion-row> -->
+
+  <ion-row  class="back" style="">
+    <ion-col>
+    </ion-col>
+    <ion-col>
+    </ion-col>
+    <ion-col>
+      <ion-button class="btnLogin"style="font-weight:bold;">
+        Add new address</ion-button> 
+    </ion-col>
+  </ion-row>
+  <ion-row class="back" style="
+ margin-top: 2px;height: 30px;"></ion-row>   
+<br>
+<ion-row class="back" style="
+  padding: 5px;margin-top: 2px;text-align: center;justify-content: start;color: black;font-weight: bold;">Contact Summary:</ion-row>   
+  
+  <ion-row class="back" style="margin-top: 2px;text-align-last: start;">
+    <ion-col >
+      <ion-label>
+        Type
+      </ion-label>
+    </ion-col>
+<ion-col class="back2">
+  <ion-label>
+    Name
+  </ion-label>
+</ion-col>
+<ion-col class="back2">
+  <ion-label>
+    Email
+  </ion-label>
+</ion-col>
+<ion-col class="back2">
+  <ion-label>
+    Phone
+  </ion-label>
+</ion-col>
+  </ion-row>
+  <ion-row class="background" style="padding: 5px;"> 
+    <ion-col>
+      <ion-label>
+        General
+      </ion-label>
+    </ion-col>
+<ion-col class="background back1 break" >
+  <ion-label style="text-decoration: underline;" color="secondary">
+  <!-- John stalin -->
+  {{loggedInVendor.first_name}} {{loggedInVendor.last_name !==null ? loggedInVendor.last_name : ''}}
+  </ion-label>
+</ion-col>
+<ion-col class="background back1 break" >
+  <ion-label style="text-decoration: underline;" color="secondary">
+    <!-- siv@gmial.com -->
+    {{loggedInVendor.contact_email}}
+  </ion-label>
+</ion-col>
+<ion-col class="background back1 break" >
+  <ion-label>
+    {{loggedInVendor.phone_no}}
+    <!-- 7639077071 -->
+  </ion-label>
+</ion-col>
+  </ion-row>
+  <ion-row  class="back" style="">
+    <ion-col>
+    </ion-col>
+    <ion-col>
+    </ion-col>
+    <ion-col>
+      <ion-button class="btnLogin"style="font-weight:bold;">
+        Add new contact</ion-button> 
+    </ion-col>
+  </ion-row>
+<br>
+<ion-row class="back" style="
+  padding: 5px;margin-top: 2px;text-align: center;justify-content: start;color: black;font-weight: bold;">Bank Details Summary:</ion-row>   
+
+<ion-row class="back" style="margin-top: 2px;text-align-last: start;">
+  <ion-col >
+    <ion-label>
+     Country
+    </ion-label>
+  </ion-col>
+<ion-col class="back1 break">
+<ion-label>
+  Bank Name
+</ion-label>
+</ion-col>
+<ion-col class="back1 break">
+<ion-label>
+  Bank Account / IBAN
+</ion-label>
+</ion-col>
+<ion-col class="back1 break">
+<ion-label>
+  Document
+</ion-label>
+</ion-col>
+</ion-row>
+
+<ion-row class="background" style="margin-top: 2px;text-align-last: start;">
+  <ion-col >
+    <ion-label>
+{{loggedInVendor.country}}
+    </ion-label>
+  </ion-col>
+<ion-col class="back-col">
+<ion-label>
+ <!-- CIBC BANK USA -->
+ {{loggedInVendor.bank_name}}
+</ion-label>
+</ion-col>
+<ion-col class="back-col">
+<ion-label class="highlight1">
+{{loggedInVendor.account}}
+</ion-label>
+</ion-col>
+<ion-col class="back-col">
+<ion-img src="assets/pdf.png" style="width: 25px;height: 25px;">
+ 
+</ion-img>
+</ion-col>
+</ion-row>
+<ion-row  class="back" style="">
+  <ion-col>
+  </ion-col>
+  <ion-col>
+  </ion-col>
+  <ion-col>
+    <ion-button class="btnLogin"style="font-weight:bold;">
+      Add new bank account</ion-button> 
+  </ion-col>
+</ion-row>
+
+</div>
+
+  </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+  </ion-content>
+  
+  <ion-footer style="position: relative;">
+    <div class="footer"></div>
+    <ion-row>
+      <ion-col>
+  <ion-label style="margin-left: 5px;font-weight: bold;">© 2017 SES S.A. All rights reserved.</ion-label>
+  </ion-col>
+  
+   
+    
+  <ion-col></ion-col>
+  <ion-label style="margin-top: 10px;">Follow Us</ion-label>
+  <ion-col>
+    <ion-row>
+    <ion-img src="assets/twitter.png" class="icon"></ion-img>
+    
+    <ion-img src="assets/facebook.png" class="icon"></ion-img>
+    
+  
+    <ion-img src="assets/youtube.png" class="icon"></ion-img>
+  
+    <ion-img src="assets/linkedin.png" class="icon"></ion-img>
+  
+    <ion-img src="assets/instagram.png" class="icon"></ion-img> 
+    <ion-label style="font-weight: bold;padding-left: 10px;">| Privacy</ion-label>
+    <ion-label style="font-weight: bold;padding-left: 10px;">| Terms and Conditions</ion-label>
+  </ion-row>
+  </ion-col>
+  </ion-row>
+  </ion-footer>
+

@@ -1,0 +1,162 @@
+<ion-header [translucent]="true" class="header">
+  <ion-img src="assets/logo.png" class="img"></ion-img>
+  </ion-header>
+  <ion-content>
+
+    <ion-grid>
+      <ion-row class="row1">
+        <ion-col size="3" class="content1">
+        
+          <ion-label class="menu" (click)="moveToLog()">Logout</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">FAQ</ion-label>
+          <br>
+          <br>
+      <ion-label class="menu">Contact Us</ion-label>
+        </ion-col>
+        <ion-col size="8" class="content2">
+        
+          <ion-row>
+            <ion-col class="mar">
+              <div class="backnum">
+              <div class="numbor1">1</div>
+            </div>
+            </ion-col>
+            <ion-col class="mar">
+              <div class="backnum">
+              <div class="numbor1">2</div>
+            </div>
+            </ion-col>
+            <ion-col class="mar">
+              <div class="backnum">
+              <div class="numbor1">3</div>
+            </div>
+            </ion-col>
+            <ion-col class="mar">
+              <div class="backnum">
+              <div class="numbor1">4</div>
+            </div>
+            </ion-col>
+            <ion-col class="mar">
+              <div class="backnum">
+              <div class="numbor1">5</div>
+            </div>
+            </ion-col>
+            <ion-col  class="mar">
+               
+       
+              <div class="backnum">
+              <div class="numbor1">6</div>
+            </div>
+            </ion-col>
+            <ion-col class="mar">
+             
+              <div class="backnum">
+              <div class="numbor1">7</div>
+            </div>
+            </ion-col>
+            <ion-col>
+              <ion-label style="margin-left: -125px;" color="primary">Terms and Conditions</ion-label>
+              <div class="horizonal"></div>
+              <div class="vertical"></div>
+              <div class="backnum">
+              <div class="numbor">8</div>
+            </div>
+            </ion-col>
+            <ion-col class="mar">
+              <div class="backnum">
+              <div class="numbor1">9</div>
+            </div>
+            </ion-col>
+          </ion-row>
+          <ion-progress-bar value="0.1" class="bar1"></ion-progress-bar>
+         <br>
+          <h4 style="text-align: center;color: red;">The file was successfully uploaded.
+            </h4>
+            <h5 style="font-weight: bold;">SES TERMS AND CONDITIONS</h5>
+            <P>Dear Vendor,</P>
+            <p>The SES Terms and Conditions were uploaded on 01 August 2017.</p>
+            <p>You can read them in PDF format 
+            <href src="" style="color: var(--ion-color-secondary);text-decoration: underline;">SES_Terms_and_Conditions.pdf.</href>Once you have read them please select either 'Agree' or 'Disagree' in oreder to continue using the SES Vendor Management System (VMS). </p>
+<ion-row class="back" style="
+  padding: 5px;margin-top: 2px;text-align: center;justify-content: center;">
+<ion-checkbox (ionChange)="select($event)" style="vertical-align: sub;"></ion-checkbox>
+<ion-input> Yes, I agree with the SES Terms and Conditions</ion-input>  
+</ion-row>       
+<ion-row class="back" style="
+padding: 5px;margin-top: 2px;text-align: center;justify-content: center;">
+<ion-checkbox (ionChange)="selects($event)" style="vertical-align: sub;"></ion-checkbox>
+<ion-input> Yes, I agree with the SES Terms and Conditions</ion-input>  
+</ion-row> 
+  <div class="login" style="margin-top: 2px;">
+  <ion-row class="back" style="text-align-last:start ;padding: 5px;">
+    <p style="color: red;padding-left: 5px;">
+      If you disagree with the SES Terms and Conditions, please provide your concerns as well as your name and contact information 
+      so we can further assist you.
+         </p>
+         <p style="color: red;padding-left: 5px;text-align: start">
+        NOTE: If you have a different agreement with SES, that agreement shall prevail(see clause 16.2 of the SES Terms and Conditions).
+      
+        In this case, please choose "Agree" and provide a comment below with the deatils of the agreement in place(date,name,etc.). 
+        </p>
+  </ion-row>
+  <ion-row class="back" style="text-align-last:start ;padding: 5px;">
+    <ion-col size="10">
+   <ion-textarea [(ngModel)] ="vendorterms.note" style="background: white;height: 200px;"></ion-textarea>
+  </ion-col>
+   <ion-col></ion-col>
+  </ion-row>
+    <ion-row class="back" style="margin-top: 2px;justify-content: end;">
+      <ion-col size="8"></ion-col>
+      <ion-col size="4">
+        <ion-button class="btnLogin" (click)="moveToBack()"> 
+          <ion-icon name="chevron-back"></ion-icon>
+          <ion-icon name="chevron-back" style="margin-left: -10px;"></ion-icon>Back
+        </ion-button>
+    
+        <ion-button class="btnLogin" (click)="moveToFinal()">Next
+          <ion-icon name="chevron-forward"></ion-icon>
+          <ion-icon name="chevron-forward" style="margin-left: -10px;"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+  
+  </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+  </ion-content>
+
+
+<ion-footer style="position: relative;">
+  <div class="footer"></div>
+  <ion-row>
+    <ion-col>
+<ion-label style="margin-left: 5px;font-weight: bold;">© 2017 SES S.A. All rights reserved.</ion-label>
+</ion-col>
+
+ 
+  
+<ion-col></ion-col>
+<ion-label style="margin-top: 10px;">Follow Us</ion-label>
+<ion-col>
+  <ion-row>
+  <ion-img src="assets/twitter.png" class="icon"></ion-img>
+  
+  <ion-img src="assets/facebook.png" class="icon"></ion-img>
+  
+
+  <ion-img src="assets/youtube.png" class="icon"></ion-img>
+
+  <ion-img src="assets/linkedin.png" class="icon"></ion-img>
+
+  <ion-img src="assets/instagram.png" class="icon"></ion-img> 
+  <ion-label style="font-weight: bold;padding-left: 10px;">| Privacy</ion-label>
+  <ion-label style="font-weight: bold;padding-left: 10px;">| Terms and Conditions</ion-label>
+</ion-row>
+</ion-col>
+</ion-row>
+</ion-footer>
+  

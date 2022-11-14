@@ -1,0 +1,640 @@
+<ion-header [translucent]="true" class="header">
+  <ion-img src="assets/logo.png" class="img"></ion-img>
+  </ion-header>
+
+
+  <ion-content>
+
+    <ion-grid style="margin-top: 30px;">
+      <ion-row class="row1">
+        <ion-col size="2" class="content1">
+        
+          <ion-label class="menu" style="color: #d84fad;" (click)="moveToHome()">Home</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu" (click)="moveToTopLevel()">Top Level Reports</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu" (click)="moveToPurchase()">Purchase Order Details</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu" (click)="moveToVendorInfo()">Vendor Information</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu" (click)="moveToInVendor()">Invited Vendors</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu" (click)="moveToAd()">Administrator Accounts</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">Sent Emails Log</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">Action Logs</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">Reset Test Account</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">IT Support Logs</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">GDPR</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu" (click)="logout()">Logout</ion-label>
+        </ion-col>
+        <ion-col size="10" class="content2">
+          <p style="text-align: center;">Here is the profile of the vendor you selected.</p>
+          <br>
+  
+          <ion-row  class="back" style="">
+            <ion-col>
+            </ion-col>
+            <ion-col>
+            </ion-col>
+            <ion-col>
+              <ion-button class="btnLogin"style="font-weight:bold;"  (click)="moveToTopLevel()" >
+                <ion-icon name="chevron-back" style="margin-left: -10px;font-weight: bold;"></ion-icon>
+                <ion-icon name="chevron-back" style="margin-left: -10px;"></ion-icon>
+                back</ion-button> 
+            </ion-col>
+          </ion-row>
+          <ion-row class="back" style="
+padding: 5px;margin-top: 2px;text-align: center;justify-content: start;color: black;font-weight: bold;">Login information:</ion-row>       
+
+
+<div class="login" style="margin-top: 2px;">
+  <ion-row class="wholeclass">
+    <ion-col class="back" size="4">
+      <ion-label style="text-align: right;">
+ Vendor ID:
+      </ion-label>
+    </ion-col>
+    <ion-col size="8">
+     <ion-label>4000021330</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row class="wholeclass" style="margin-top: 2px;">
+    <ion-col class="back" size="4">
+      <ion-label style="text-align: right;">
+    Login ID
+      </ion-label>
+    </ion-col>
+    <ion-col size="8">
+   <ion-label>4000021330</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row class="wholeclass" style="margin-top: 2px;">
+    <ion-col class="back" size="4">
+      <ion-label style="text-align: right;">
+Password Reset:
+      </ion-label>
+    </ion-col>
+    <ion-col size="8">
+    <ion-label>Yes</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row class="wholeclass" style="margin-top: 2px;">
+    <ion-col class="back" size="4">
+      <ion-label style="text-align: right;">
+Login Level:
+      </ion-label>
+    </ion-col>
+    <ion-col size="8">
+    <ion-label>4 (Edited bank details)</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row class="wholeclass" style="margin-top: 2px;">
+    <ion-col class="back" size="4">
+      <ion-label style="text-align: right;">
+T & C Accept Status:
+      </ion-label>
+    </ion-col>
+    <ion-col size="8">
+    <ion-label>(unknown status)</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row class="wholeclass" style="margin-top: 2px;">
+    <ion-col class="back" size="4">
+      <ion-label style="text-align: right;">
+ Activation Status:
+      </ion-label>
+    </ion-col>
+    <ion-col size="8">
+    <ion-label>Activated</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row class="wholeclass" style="margin-top: 2px;">
+    <ion-col class="back" size="4">
+      <ion-label style="text-align: right;">
+Last Login:
+      </ion-label>
+    </ion-col>
+    <ion-col size="8">
+    <ion-label>0000-00-00 00:00:00</ion-label>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="back" style="
+  padding: 5px;margin-top: 2px;text-align: center;justify-content: start;color: black;font-weight: bold;">Registration Reminder Details:</ion-row>       
+    <ion-row class="wholeclass" style="margin-top: 2px;">
+      <ion-col class="back" size="4">
+        <ion-label style="text-align: right;">
+   Notify Login Status:
+        </ion-label>
+      </ion-col>
+      <ion-col size="8">
+      <ion-label>N</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row class="wholeclass" style="margin-top: 2px;">
+      <ion-col class="back" size="4">
+        <ion-label style="text-align: right;">
+   Remain Login 1 Status:
+        </ion-label>
+      </ion-col>
+      <ion-col size="8">
+      <ion-label>N</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row class="wholeclass" style="margin-top: 2px;">
+      <ion-col class="back" size="4">
+        <ion-label style="text-align: right;">
+   Remind Login 2 Status:
+        </ion-label>
+      </ion-col>
+      <ion-col size="8">
+      <ion-label>N</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row class="wholeclass" style="margin-top: 2px;">
+      <ion-col class="back" size="4">
+        <ion-label style="text-align: right;">
+          Remind Completion 1 Status:
+        </ion-label>
+      </ion-col>
+      <ion-col size="8">
+      <ion-label>N</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row class="wholeclass" style="margin-top: 2px;">
+      <ion-col class="back" size="4">
+        <ion-label style="text-align: right;">
+  Remind Completion 2 Status:
+        </ion-label>
+      </ion-col>
+      <ion-col size="8">
+      <ion-label>N</ion-label>
+      </ion-col>
+    </ion-row>
+  <ion-row class="back" style="margin-top: 2px;justify-content: end;">
+    <ion-col size="2"></ion-col>
+    <ion-col size="10">
+      <ion-button class="btnLogin"> 
+        Deactivate
+      </ion-button>
+  
+      <ion-button class="btnLogin">
+        GDPR delete
+      </ion-button>
+      <ion-button class="btnLogin">
+      Reset T & C
+      </ion-button>
+      <ion-button class="btnLogin">
+    Send completion reminder
+      </ion-button>
+      <ion-button class="btnLogin">
+        Reset password
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row class="back" style="
+  padding: 5px;margin-top: 2px;text-align: center;justify-content: start;color: black;font-weight: bold;">Address Summary:</ion-row>   
+   <ion-row class="wholeclass" style="margin-top: 2px;">
+    <ion-col class="back" style="text-align-last: start;" size="3">
+      <ion-label>
+Type
+      </ion-label>
+    </ion-col>
+    <ion-col class="back1" size="3">
+      <ion-label>
+    Company Name
+             </ion-label>
+    </ion-col>
+    <ion-col class="back1" size="3">
+      <ion-label>
+Address
+      </ion-label>
+    </ion-col>
+    <ion-col class="back1" size="1">
+      <ion-label>
+City
+      </ion-label>
+    </ion-col>
+    <ion-col class="back1" size="2">
+      <ion-label>
+Phone
+      </ion-label>
+    </ion-col>
+  </ion-row>
+
+  <ion-row style="margin-top: 2px;">
+    <ion-col class="background" size="3">
+      <ion-label>
+Ordering address
+      </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="3">
+      <ion-label class="highlight1" style="text-transform: uppercase;">
+on computer services, llc
+             </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="3">
+      <ion-label style="text-transform:uppercase;">
+9351  philadelphia road, suite
+      </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="1">
+      <ion-label style="text-transform:capitalize;">
+baltimore
+      </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="2">
+      <ion-label>
+19725246052
+      </ion-label>
+    </ion-col>
+  </ion-row>
+
+  <ion-row style="margin-top: 2px;">
+    <ion-col class="background" size="3">
+      <ion-label>
+Company registration address
+      </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="3">
+      <ion-label class="highlight1" style="text-transform: uppercase;">
+on computer services, llc
+             </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="3">
+      <ion-label style="text-transform:uppercase;">
+9351  philadelphia road, suite
+      </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="1">
+      <ion-label style="text-transform:capitalize;">
+baltimore
+      </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="2">
+      <ion-label>
+19725246052
+      </ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row style="margin-top: 2px;">
+    <ion-col class="background" size="3">
+      <ion-label>
+Ordering address
+      </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="3">
+      <ion-label class="highlight1" style="text-transform: uppercase;">
+on computer services, llc
+             </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="3">
+      <ion-label style="text-transform:uppercase;">
+9351  philadelphia road, suite
+      </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="1">
+      <ion-label style="text-transform:capitalize;">
+baltimore
+      </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="2">
+      <ion-label>
+19725246052
+      </ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row style="margin-top: 2px;">
+    <ion-col class="background" size="3">
+      <ion-label>
+Invoicing address
+      </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="3">
+      <ion-label class="highlight1" style="text-transform: uppercase;">
+on computer services, llc
+             </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="3">
+      <ion-label style="text-transform:uppercase;">
+9351  philadelphia road, suite
+      </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="1">
+      <ion-label style="text-transform:capitalize;">
+baltimore
+      </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="2">
+      <ion-label>
+19725246052
+      </ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row style="margin-top: 2px;">
+    <ion-col class="background" size="3">
+      <ion-label>
+Return address
+      </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="3">
+      <ion-label class="highlight1" style="text-transform: uppercase;">
+on computer services, llc
+             </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="3">
+      <ion-label style="text-transform:uppercase;">
+9351  philadelphia road, suite
+      </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="1">
+      <ion-label style="text-transform:capitalize;">
+baltimore
+      </ion-label>
+    </ion-col>
+    <ion-col class="background back1" size="2">
+      <ion-label>
+19725246052
+      </ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row class="back" style="
+ margin-top: 2px;height: 30px;"></ion-row>   
+<br>
+<ion-row class="back" style="
+  padding: 5px;margin-top: 2px;text-align: center;justify-content: start;color: black;font-weight: bold;">Contact Summary:</ion-row>   
+  
+  <ion-row class="back" style="margin-top: 2px;text-align-last: start;">
+    <ion-col >
+      <ion-label>
+        Type
+      </ion-label>
+    </ion-col>
+<ion-col class="back1">
+  <ion-label>
+    Name
+  </ion-label>
+</ion-col>
+<ion-col class="back1">
+  <ion-label>
+    Email
+  </ion-label>
+</ion-col>
+<ion-col class="back1">
+  <ion-label>
+    Phone
+  </ion-label>
+</ion-col>
+  </ion-row>
+  <ion-row class="background" style="padding: 5px;"> 
+    <ion-label>
+      No contacts found
+    </ion-label>
+  </ion-row>
+  <ion-row  class="back" style="">
+    <ion-col>
+    </ion-col>
+    <ion-col>
+    </ion-col>
+    <ion-col>
+      <ion-button class="btnLogin"style="font-weight:bold;">
+        Add new contact</ion-button> 
+    </ion-col>
+  </ion-row>
+<br>
+<ion-row class="back" style="
+  padding: 5px;margin-top: 2px;text-align: center;justify-content: start;color: black;font-weight: bold;">Bank Details Summary:</ion-row>   
+
+<ion-row class="back" style="margin-top: 2px;text-align-last: start;">
+  <ion-col >
+    <ion-label>
+     Country
+    </ion-label>
+  </ion-col>
+<ion-col class="back1">
+<ion-label>
+  Bank Name
+</ion-label>
+</ion-col>
+<ion-col class="back1">
+<ion-label>
+  Bank Account / IBAN
+</ion-label>
+</ion-col>
+<ion-col class="back1">
+<ion-label>
+  Document
+</ion-label>
+</ion-col>
+</ion-row>
+<ion-row class="background" style="margin-top: 2px;text-align-last: start;">
+  <ion-col >
+    <ion-label>
+     United States
+    </ion-label>
+  </ion-col>
+<ion-col class="back-col">
+<ion-label>
+ CIBC BANK USA
+</ion-label>
+</ion-col>
+<ion-col class="back-col">
+<ion-label class="highlight1">
+0002279061
+</ion-label>
+</ion-col>
+<ion-col class="back-col">
+<ion-img src="assets/pdf.png" style="width: 25px;height: 25px;">
+ 
+</ion-img>
+</ion-col>
+</ion-row>
+<ion-row  class="back" style="">
+  <ion-col>
+  </ion-col>
+  <ion-col>
+  </ion-col>
+  <ion-col>
+    <ion-button class="btnLogin"style="font-weight:bold;">
+      Add new bank account</ion-button> 
+  </ion-col>
+</ion-row>
+<br>
+<ion-row class="back" style="
+  padding: 5px;margin-top: 2px;text-align: center;justify-content: start;color: black;font-weight: bold;">Primary Product & Service Classification:</ion-row>   
+ <ion-row class="background" style="padding: 5px;"> 
+  <ion-label>
+ Unable to generate summary section.
+  </ion-label>
+</ion-row>
+<br>
+<ion-row class="back" style="
+  padding: 5px;margin-top: 2px;text-align: center;justify-content: start;color: black;font-weight: bold;">Tax Details Summary:</ion-row>   
+<ion-row class="back" style="margin-top: 2px;text-align-last: start;">
+  <ion-col size="8">
+    <ion-label>
+     Tax Number Type
+    </ion-label>
+  </ion-col>
+<ion-col class="back1" size="4">
+<ion-label>
+  Tax Number
+</ion-label>
+</ion-col>
+</ion-row>
+<ion-row class="background" style="margin-top: 2px;text-align-last: start;">
+  <ion-col size="8" class="back-col">
+    <ion-label>
+    USA: Employer ID Number
+    </ion-label>
+  </ion-col>
+<ion-col class="back-col" size="4">
+<ion-label class="highlight1">
+ 56-2379512
+</ion-label>
+</ion-col>
+</ion-row>
+<ion-row  class="back" style="">
+  <ion-col>
+  </ion-col>
+  <ion-col>
+  </ion-col>
+  <ion-col>
+    <ion-button class="btnLogin"style="font-weight:bold;">
+      Add new tax record</ion-button> 
+  </ion-col>
+</ion-row>
+<br>
+<ion-row class="back" style="
+  padding: 5px;margin-top: 2px;text-align: center;justify-content: start;color: black;font-weight: bold;">Tax Form Uploads:</ion-row>   
+<ion-row class="back" style="margin-top: 2px;text-align-last: start;">
+  <ion-col size="4">
+    <ion-label>
+   Upload Date
+    </ion-label>
+  </ion-col>
+<ion-col class="back1" size="4">
+<ion-label>
+ Form Type
+</ion-label>
+</ion-col>
+<ion-col size="4" class="back1">
+  <ion-label>
+    Download
+  </ion-label>
+</ion-col>
+</ion-row>
+<br>
+<ion-row  class="back" style="">
+  <ion-col>
+  </ion-col>
+  <ion-col>
+  </ion-col>
+  <ion-col>
+    <ion-button class="btnLogin"style="font-weight:bold;">
+      new upload</ion-button> 
+  </ion-col>
+</ion-row>
+<br>
+<ion-row class="back" style="
+  padding: 5px;margin-top: 2px;text-align: center;justify-content: start;color: black;font-weight: bold;">SES Terms and Conditions History:</ion-row>   
+<ion-row class="back" style="margin-top: 2px;text-align-last: start;">
+  <ion-col size="3">
+    <ion-label>
+Effective
+    </ion-label>
+  </ion-col>
+<ion-col class="back1" size="3">
+<ion-label>
+  Decision
+</ion-label>
+</ion-col>
+<ion-col class="back1" size="3">
+  <ion-label>
+    Decision Date
+  </ion-label>
+  </ion-col>
+  <ion-col class="back1" size="3">
+    <ion-label>
+      Comment
+    </ion-label>
+    </ion-col>
+</ion-row>
+<ion-row class="background" style="margin-top: 2px;text-align-last: start;">
+  <ion-col size="3" class="back-col">
+    <ion-label>
+2005-12-29
+    </ion-label>
+  </ion-col>
+<ion-col class="back-col" size="3">
+<ion-label>
+Agreed
+</ion-label>
+</ion-col>
+<ion-col class="back-col" size="3">
+  <ion-label>
+2015-04-16
+  </ion-label>
+  </ion-col>
+  <ion-col class="back-col" size="3">
+    <ion-label>
+   
+    </ion-label>
+    </ion-col>
+</ion-row>
+
+</div>
+
+  </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+  </ion-content>
+  
+  <ion-footer style="position: relative;">
+    <div class="footer"></div>
+    <ion-row>
+      <ion-col>
+  <ion-label style="margin-left: 5px;font-weight: bold;">© 2017 SES S.A. All rights reserved.</ion-label>
+  </ion-col>
+  
+   
+    
+  <ion-col></ion-col>
+  <ion-label style="margin-top: 10px;">Follow Us</ion-label>
+  <ion-col>
+    <ion-row>
+    <ion-img src="assets/twitter.png" class="icon"></ion-img>
+    
+    <ion-img src="assets/facebook.png" class="icon"></ion-img>
+    
+  
+    <ion-img src="assets/youtube.png" class="icon"></ion-img>
+  
+    <ion-img src="assets/linkedin.png" class="icon"></ion-img>
+  
+    <ion-img src="assets/instagram.png" class="icon"></ion-img> 
+    <ion-label style="font-weight: bold;padding-left: 10px;">| Privacy</ion-label>
+    <ion-label style="font-weight: bold;padding-left: 10px;">| Terms and Conditions</ion-label>
+  </ion-row>
+  </ion-col>
+  </ion-row>
+  </ion-footer>
+

@@ -1,0 +1,108 @@
+.header {
+    min-height: 100px;
+    background-image: linear-gradient(to right,hsl(319, 64, 58),hsl(206, 68, 61));
+  }
+.img{
+    height: 99px;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 80%;
+}
+.menu{
+    color: black;
+}
+.menu:hover{
+    color: hsl(319, 64, 58);
+}
+ion-footer{
+    position: relative;
+}
+.footer {
+    min-height: 50px;
+    position: relative;
+    background-image: linear-gradient(to right,hsl(319, 64, 58),hsl(206, 68, 61));
+    
+  }
+  .icon{
+    height: 25px;width: 25px;padding-left: 10px;
+}
+
+.wholeclass{
+    background: #fbfbfe;
+}
+.input{
+    border: 1px solid lightgray;
+  
+    
+}
+.content1{
+    flex-wrap: nowrap;
+    height: fit-content;
+}
+.content2{
+    flex-wrap: nowrap;
+    height: fit-content;
+}
+
+
+.numbor{
+    border-radius: 46%;
+    border: 1px solid var(--ion-color-primary);
+    text-align: center;
+    color: var(--ion-color-primary);
+}
+.numbor1{
+    border-radius: 50%;
+    border: 1px solid lightgray;
+    text-align: center;
+}
+.backnum{
+ 
+    padding-left: 35px;
+    padding-right: 35px;
+
+}
+:root {  
+    --ion-safe-area-top: 20px;  
+    --ion-safe-area-bottom: 22px;  
+  }  
+  .swiper-slide {  
+    display: block;  
+  }  
+  ion-slide > h2 {  
+    margin-top: 2.8rem;  
+  }  
+  ion-slide > img {  
+    max-height: 50%;  
+    max-width: 60%;  
+    margin: 36px 0;  
+  }  
+  .mar{
+      margin-top: 40px;
+  }
+  .vertical{
+    background-color: var(--ion-color-primary);
+    width: 2px;
+    height: 20px;
+    margin-left: 50%;
+}
+.horizonal{
+    background-color: var(--ion-color-primary);
+    width: 20px;
+    height: 2px;
+    margin-left: 31%;   
+}
+
+.head{
+  border-left: 2px solid white;
+  background: #d9d9ff;
+  text-align: center;
+}
+.head1{
+  border-left: 2px solid white;
+
+}
+.width{
+    width: 800px;
+}

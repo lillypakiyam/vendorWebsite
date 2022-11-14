@@ -1,0 +1,322 @@
+<ion-header [translucent]="true" class="header">
+  <ion-img src="assets/logo.png" class="img"></ion-img>
+  </ion-header>
+
+
+  <ion-content>
+
+    <ion-grid>
+      <ion-row class="row1">
+        <ion-col size="1" class="content1">
+        
+          <ion-label class="menu" (click)="inviteNav('home')" >Home</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu" (click)="inviteNav('toplevel')">Top Level Reports</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu" (click)="inviteNav('purchase')">Purchase Order Details</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu" (click)="inviteNav('vendorinform')">Vendor Information</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu" (click)="inviteNav('invitedvendors')" style="color: #d84fad;">Invited Vendors</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu" (click)="inviteNav('invited')">Administrator Accounts</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">Sent Emails Log</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">Action Logs</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">Reset Test Account</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">IT Support Logs</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">GDPR</ion-label>
+          <br>
+          <br>
+          <ion-label class="menu">Logout</ion-label>
+        </ion-col>
+        <ion-col size="11" class="content2">
+      <h6 style="text-align: center;">Here is the list of invited vendors.</h6>
+          <ion-card style="width:700px;margin-left:20%;margin-right:20%;">
+            <ion-row class="back">
+              
+              <ion-col>
+            
+              </ion-col>
+              <ion-col>
+                <ion-button class="btnLogin" (click)="inviteAnother()">
+                 Invite another</ion-button>
+                 
+                <ion-button class="btnLogin" >Download as CSV
+             
+              </ion-button>
+              </ion-col>
+            </ion-row>
+            <ion-row style=" background: #d9d9ff;text-align: left;padding-left: 10px;margin-top: 2px;">
+             <p style="color: black;font-weight: bold;text-align: left;">Search for vendors by Date:</p>
+            </ion-row>
+            <ion-row class="wholeclass" style="margin-top: 2px;">
+              <ion-col class="back" size="2">
+                <ion-label style="text-align: right;color: black;">
+                  From Date:
+                </ion-label>
+              </ion-col>
+
+              <ion-col size="3">
+                <ion-item>
+                  <ion-input
+                    value="{{ date | date: 'dd.MM.yyyy' }}"
+                    id="date"
+                    class="ion-text-end" placeholder="Date" clearInput></ion-input>
+                  <ion-popover trigger="date" style="width: 5000px;">
+                    <ng-template>
+                      <ion-datetime presentation="date" [(ngModel)]="date" locale="sl-SI"></ion-datetime>
+                    </ng-template>
+                  </ion-popover>
+                </ion-item>
+              </ion-col>
+
+              <ion-col class="back" size="2">
+                <ion-label style="text-align: right;color: black;">
+                To Date:
+                </ion-label>
+              </ion-col>
+
+              <ion-col size="3">
+                <ion-item>
+                  <ion-input
+                    value="{{ dates | date: 'dd.MM.yyyy' }}"
+                    id="dates"
+                    class="ion-text-end" placeholder="Date" clearInput></ion-input>
+                  <ion-popover trigger="dates" style="width: 5000px;">
+                    <ng-template>
+                      <ion-datetime
+                        presentation="date"
+                        [(ngModel)]="dates"
+                        locale="sl-SI">
+                      </ion-datetime>
+                    </ng-template>
+                  </ion-popover>
+                </ion-item>
+              </ion-col>
+              <ion-col size="2" class="back">
+                <ion-button class="btnLogin" (click)="searchbyDate(date, dates)">Search</ion-button>
+              </ion-col>
+            </ion-row>
+            <ion-row style=" background: #d9d9ff;text-align: left;padding-left: 10px;margin-top: 2px;">
+           <ion-col size="5">   <p style="color: black;font-weight: bold;">Search for vendors by Name or ID:</p>
+           </ion-col>
+
+            </ion-row>
+            <ion-row class="wholeclass" style="margin-top: 2px;">
+              <ion-col class="back" size="4">
+                <ion-label style="color: black;text-align: left;">
+        Full or partial Vendor Name or ID:
+                </ion-label>
+              </ion-col>
+              <ion-col size="6">
+               <ion-input class="input" inputmode="search" (ionInput)="searchElement($event)"></ion-input>
+              </ion-col>
+              <ion-col size="2" class="back">
+                <ion-button class="btnLogin" >Search</ion-button>
+              </ion-col>
+            </ion-row>
+           
+          </ion-card>
+          
+
+<div class="login" style="">
+
+  <ion-row class="wholeclass">
+       <ion-col class="back" size="1" style="text-align-last:start ;">
+      <ion-label class="highlight">
+   Temp.ID
+      </ion-label>
+    </ion-col>
+    <ion-col class="head" size="1">
+   <ion-label class="highlight">Company</ion-label>
+    </ion-col>
+    <ion-col class="head" size="2">
+  <ion-label class="highlight">Company Email</ion-label>
+    </ion-col>
+    <ion-col class="head" size="2">
+<ion-label class="highlight">
+  Requested Email
+</ion-label>
+    </ion-col>
+    <ion-col class="head" size="1">
+      <ion-label>Invoice Exists?</ion-label>
+    </ion-col>
+    <ion-col class="head">
+      <ion-label class="highlight">
+      Invited
+      </ion-label>
+      </ion-col>
+      <ion-col class="head">
+        <ion-label class="highlight">
+    Last Login
+        </ion-label>
+        </ion-col>
+        <ion-col class="head">
+          <ion-label class="highlight">
+     Login Level
+          </ion-label>
+          </ion-col>
+          <ion-col class="head" size="2">
+            <ion-label class="highlight">
+            Invited By
+            </ion-label>
+    </ion-col>
+  </ion-row>
+  
+  
+  <ion-row class="wholeclass" style="margin-top: 2px;" *ngFor="let vendor of vendorInvite">
+    <ion-col class="head1" size="1" style="text-align-last:start ;">
+   <ion-label class="highlight" (click)="vendorinfo(vendor)">
+{{vendor.id}}
+   </ion-label>
+ </ion-col>
+ <ion-col class="head1" size="1">
+   <ion-label class="">{{vendor.companyname}}</ion-label>
+ </ion-col>
+ <ion-col class="head1" size="2">
+<ion-label class="highlight">{{vendor.companyEmail}}</ion-label>
+ </ion-col>
+ <ion-col class="head1" size="2">
+<ion-label class="highlight">
+{{vendor.requestEmail}}</ion-label>
+ </ion-col>
+ <ion-col class="head1" size="1">
+   <ion-label></ion-label>
+ </ion-col>
+ <ion-col class="head1">
+   <ion-label>
+  {{vendor.invite_Date}}
+   </ion-label>
+   </ion-col>
+   <ion-col class="head1">
+     <ion-label>
+ {{vendor.login_date !== null ?vendor.login_date : '0' }}
+     </ion-label>
+     </ion-col>
+     <ion-col class="head1">
+       <ion-label class="highlight">
+0
+<!-- login level -->
+     </ion-label>
+       </ion-col>
+       <ion-col class="head1" size="2">
+         <ion-label class="highlight">
+     {{vendor.invited_by}}
+         </ion-label>
+  </ion-col>
+ </ion-row>
+
+<!-- <ion-row class="wholeclass" style="margin-top: 2px;">
+  <ion-col class="back" size="1" style="text-align-last:start ;">
+ <ion-label class="highlight">
+TEMP002868
+ </ion-label>
+</ion-col>
+<ion-col class="head" size="1">
+<ion-label class="">MY CARRIO</ion-label>
+</ion-col>
+<ion-col class="head" size="2">
+<ion-label class="highlight">hironraja.p@gmail.com</ion-label>
+</ion-col>
+<ion-col class="head" size="2">
+<ion-label class="highlight">
+ba.bhavanee@gmail.com
+</ion-label>
+</ion-col>
+<ion-col class="head" size="1">
+ <ion-label></ion-label>
+</ion-col>
+<ion-col class="head">
+ <ion-label class="">
+ 2022-09-02
+ </ion-label>
+ </ion-col>
+ <ion-col class="head">
+   <ion-label class="">
+0000-00-00  00:00:00
+   </ion-label>
+   </ion-col>
+   <ion-col class="head">
+     <ion-label class="highlight">
+0
+     </ion-label>
+     </ion-col>
+     <ion-col class="head" size="2">
+       <ion-label class="highlight">
+      bhavanee.ambati@ses.com
+       </ion-label>
+</ion-col>
+</ion-row> -->
+
+<ion-row class="back1" style="margin-top: 2px;">
+  <ion-col size="2">
+
+    <ion-button class="btnLogin" >
+          <ion-icon name="chevron-back"></ion-icon>
+      <ion-icon name="chevron-back" style="margin-left: -10px;"></ion-icon>
+      Previous page</ion-button>
+  </ion-col>
+  <ion-col size="8" style="text-align: center;vertical-align: sub;">
+<ion-label style="vertical-align: sub;">You are on page 1 of 1</ion-label>
+  </ion-col>
+  <ion-col size="2">
+
+    <ion-button class="btnLogin" >Next page
+      <ion-icon name="chevron-forward"></ion-icon>
+      <ion-icon name="chevron-forward" style="margin-left: -10px;"></ion-icon>
+    </ion-button>
+  </ion-col>
+</ion-row>
+
+
+ </div>
+  </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+  </ion-content>
+  
+  <ion-footer style="position: relative;">
+    <div class="footer"></div>
+    <ion-row>
+      <ion-col>
+  <ion-label style="margin-left: 5px;font-weight: bold;">© 2017 SES S.A. All rights reserved.</ion-label>
+  </ion-col>
+  
+   
+    
+  <ion-col></ion-col>
+  <ion-label style="margin-top: 10px;">Follow Us</ion-label>
+  <ion-col>
+    <ion-row>
+    <ion-img src="assets/twitter.png" class="icon"></ion-img>
+    
+    <ion-img src="assets/facebook.png" class="icon"></ion-img>
+    
+  
+    <ion-img src="assets/youtube.png" class="icon"></ion-img>
+  
+    <ion-img src="assets/linkedin.png" class="icon"></ion-img>
+  
+    <ion-img src="assets/instagram.png" class="icon"></ion-img> 
+    <ion-label style="font-weight: bold;padding-left: 10px;">| Privacy</ion-label>
+    <ion-label style="font-weight: bold;padding-left: 10px;">| Terms and Conditions</ion-label>
+  </ion-row>
+  </ion-col>
+  </ion-row>
+  </ion-footer>
